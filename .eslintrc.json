@@ -8,7 +8,6 @@
         }
     },
     "env": {
-        "browser": true,
         "node": true,
         "mocha": true,
         "es6": true
@@ -18,10 +17,13 @@
       "Identity": false,
       "It":false,
       "is": false,
+      "isNot": false,
       "isEqual" : true,
       "isFalse": false,
       "isTrue": false,
-      "___": true
+      "___": true,
+      "throws": true,
+      "noThrows": true
     },
     "extends": [
         "eslint:recommended"
