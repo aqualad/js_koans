@@ -15,11 +15,13 @@
     },
     "globals": {
       "expect": false,
-      "identity": false,
+      "Identity": false,
       "It":false,
       "is": false,
+      "isEqual" : true,
       "isFalse": false,
-      "isTrue": false
+      "isTrue": false,
+      "___": true
     },
     "extends": [
         "eslint:recommended"
