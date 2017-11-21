@@ -29,4 +29,31 @@ describe('ES6 Object Syntax Enhancements', () => {
             is(___, lessTyping[dynamicExpression(0)] );
         });
     });
+
+    describe('Property Definitions', () => {
+        It('is the greatest thing since sliced bread', () => {
+
+            let a = 1;
+            let b = 2;
+            let c = 3;
+            let altogetherNow = {
+                a,
+                b,
+                c
+            };
+            is(___, altogetherNow.a);
+            is(___, altogetherNow.b);
+            is(___, altogetherNow.c);
+
+            const fun = (a,b,c) => ({
+                a,
+                b,
+                c
+            });
+            const f = fun();
+            is(___, f.a);
+            is(___, f.b);
+            is(___, f.c);
+        });
+    });
 });
