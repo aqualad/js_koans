@@ -61,9 +61,8 @@ describe('Destructuring', () => {
             is(___, z);
         });
         It('breaks on undefined or null', () => {
-            let x,y;
             const unsafe = ({x, y}) => x + y;
-            expect(unsafe).to.throw(___);
+            expect(unsafe).to.throw(SyntaxError);
             const safeDefaults = ({x,y} = {}) => x + y;
             expect(safeDefaults).to.not.throw(___);
         });
