@@ -13,6 +13,14 @@
         "mocha": true,
         "es6": true
     },
+    "globals": {
+      "expect": false,
+      "identity": false,
+      "It":false,
+      "is": false,
+      "isFalse": false,
+      "isTrue": false
+    },
     "extends": [
         "eslint:recommended"
     ],

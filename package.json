@@ -5,15 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run another-one-bites-the-dust",
-    "test": "npm run ",
-    "mocha": "echo $(pwd); ./scripts/test.sh",
-    "mocha:watch": "npm run mocha -- --watch",
-    "mocha:babel": "TEST_FOLDER=src npm run mocha -- --compilers js:babel-core/register",
-    "mocha:babel:watch": "TEST_FOLDER=src npm run mocha:babel -- --watch",
-    "babel": "babel lib --out-dir tmp",
-    "babel:mocha": "npm run babel && npm run mocha",
-    "another-one-bites-the-dust": "npm run i-want-to-ride-my-bicycle -- --bail",
-    "i-want-to-ride-my-bicycle": "npm run mocha:babel:watch test/index.js"
+    "test": "npm run i-want-to-ride-my-bicycle",
+    "mocha:watch": "mocha --watch --require index.js",
+    "another-one-bites-the-dust": "npm run mocha:watch -- --bail",
+    "i-want-to-ride-my-bicycle": "npm run mocha:watch"
   },
   "repository": {
     "type": "git",
@@ -26,11 +21,13 @@
   },
   "homepage": "https://github.com/hafley66/js_koans#readme",
   "dependencies": {
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-core": "^6.26.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "chai": "^4.1.2",
     "chokidar": "^1.7.0",
+    "glob": "^7.1.2",
     "lodash": "^4.17.4",
-    "mocha": "^4.0.1"
+    "mocha": "^4.0.1",
+    "ramda": "^0.25.0"
   }
 }
